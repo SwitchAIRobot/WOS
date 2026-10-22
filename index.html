@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>WO Sports – Women’s only sports sessions</title>
+  <meta name="description" content="Women’s-only swimming, badminton and basketball sessions in Hackney and Tower Hamlets. Free, works offline.">
+  <meta name="theme-color" content="#0e4a5a">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="WO Sports">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="poster">
+    <svg class="art" viewBox="0 0 390 104" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
+      <defs>
+        <filter id="grain" x="0" y="0" width="100%" height="100%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="4" result="n"/>
+          <feColorMatrix type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.9 -0.35"/>
+        </filter>
+      </defs>
+      <rect width="390" height="104" fill="#0e4a5a"/>
+      <!-- sun -->
+      <circle cx="296" cy="44" r="52" fill="#bfd9e8"/>
+      <!-- flowing ivory ribbon -->
+      <path d="M-10 70 C 60 30, 120 96, 200 56 S 330 40, 400 66 L400 104 L-10 104 Z" fill="#f7f2e7"/>
+      <!-- elongated terracotta figure overprinting the sun -->
+      <ellipse cx="258" cy="46" rx="11" ry="58" transform="rotate(24 258 46)" fill="#d58a6d" style="mix-blend-mode:multiply"/>
+      <!-- coral disc overprint -->
+      <circle cx="104" cy="40" r="30" fill="#f27b64" style="mix-blend-mode:multiply"/>
+      <!-- petrol silhouette arc -->
+      <path d="M40 104 C 56 40, 138 22, 178 70 C 150 56, 92 64, 40 104 Z" fill="#0e4a5a" opacity="0.92"/>
+      <!-- powder stripes -->
+      <rect x="0" y="22" width="76" height="5" fill="#bfd9e8"/>
+      <rect x="0" y="32" width="52" height="5" fill="#bfd9e8"/>
+      <!-- lettering band -->
+      <rect x="0" y="76" width="390" height="28" fill="#0e4a5a"/>
+      <rect width="390" height="104" filter="url(#grain)" opacity="0.14" style="mix-blend-mode:multiply"/>
+    </svg>
+    <h1>Women’s only sports sessions</h1>
+  </header>
+
+  <div class="searchbar" id="searchbar" role="search">
+    <label for="q" class="sr-only">Search sessions by sport, venue, day or time</label>
+    <div class="searchbox">
+      <svg class="glass" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg>
+      <input id="q" type="search" inputmode="search" enterkeyhint="search" autocomplete="off" autocapitalize="off" spellcheck="false"
+             placeholder="Sport, venue, day or time">
+      <button type="button" class="clear" id="q-clear" aria-label="Clear search" hidden>&times;</button>
+    </div>
+    <p class="search-status" id="q-status" role="status" aria-live="polite"></p>
+  </div>
+
+  <main id="main" tabindex="-1">
+    <section class="view" id="view-timetable" aria-label="Timetable">
+      <div id="tt-days" class="daytabs" role="tablist" aria-label="Day of the week"></div>
+      <div id="tt-body" class="pane"></div>
+    </section>
+
+    <section class="view" id="view-calendar" aria-label="My Calendar" hidden>
+      <div class="cal-top" id="cal-top"></div>
+      <div id="cal-body" class="pane"></div>
+    </section>
+
+    <section class="view" id="view-search" aria-label="Search" hidden>
+      <div id="search-body" class="scroll-y"></div>
+    </section>
+  </main>
+
+  <nav class="tabs" aria-label="Main">
+    <button type="button" data-tab="timetable" aria-current="page">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 4v16M15 10v10"/></svg>
+      <span>Timetable</span>
+    </button>
+    <button type="button" data-tab="calendar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4M9 15l2 2 4-4"/></svg>
+      <span>My Calendar</span>
+      <span class="badge" id="badge" hidden>0</span>
+    </button>
+    <button type="button" data-tab="search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg>
+      <span>Search</span>
+    </button>
+  </nav>
+
+  <dialog id="detail" aria-labelledby="detail-title"></dialog>
+  <dialog id="action" aria-labelledby="action-title"></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+  <noscript><p style="padding:16px">WO Sports needs JavaScript to show the timetable.</p></noscript>
+
+  <!-- Fuse.js (pinned). If the CDN is unreachable, try a local copy named fuse.min.js; if that is missing too,
+       logic.js falls back to a small built-in fuzzy matcher so search still works. -->
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"
+          onerror="var s=document.createElement('script');s.src='fuse.min.js';document.head.appendChild(s);"></script>
+  <script src="logic.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

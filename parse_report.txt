@@ -1,0 +1,37 @@
+Parsed 19 sessions from Womens_only_sports_session_data.csv -> timetable.json
+14 can be placed on the grid; 5 have no confirmed day/time.
+19 rows were wrapped in an extra pair of quotes in the CSV and were repaired automatically.
+
+ROWS TO CHECK (line numbers refer to the CSV file, line 1 = header):
+
+Line 2: Swim for Women (Training Pool) @ Clissold Leisure Centre  [swimming-clissold-leisure-centre-swim-for-women-training-pool-tbc]
+   CHECK: day is "Not stated" (cannot be placed on the grid)
+   CHECK: start_time is "Not stated" (cannot be placed on the grid)
+   CHECK: end_time is "Not stated" (cannot be placed on the grid)
+   CHECK: source confidence is Medium - verify before relying on it
+
+Line 3: Swim for Women & Girls @ Clissold Leisure Centre  [swimming-clissold-leisure-centre-swim-for-women-girls-tbc]
+   CHECK: day is "Not stated" (cannot be placed on the grid)
+   CHECK: start_time is "Not stated" (cannot be placed on the grid)
+   CHECK: end_time is "Not stated" (cannot be placed on the grid)
+   CHECK: source confidence is Medium - verify before relying on it
+
+Line 4: Women-only swimming @ Britannia Leisure Centre  [swimming-britannia-leisure-centre-women-only-swimming-tbc]
+   CHECK: day is "Not stated" (cannot be placed on the grid)
+   CHECK: start_time is "Not stated" (cannot be placed on the grid)
+   CHECK: end_time is "Not stated" (cannot be placed on the grid)
+   CHECK: source confidence is Medium - verify before relying on it
+
+Line 17: Female Social Badminton @ Poplar Baths Leisure Centre  [badminton-poplar-baths-leisure-centre-female-social-badminton-tbc]
+   CHECK: day is "Not confirmed" (cannot be placed on the grid)
+   CHECK: source confidence is Medium - verify before relying on it
+
+Line 18: Female Social Badminton @ Poplar Baths Leisure Centre  [badminton-poplar-baths-leisure-centre-sunday-1500]
+   CHECK: source confidence is Medium - verify before relying on it
+
+Line 19: Female Social Badminton @ Mile End Park Leisure Centre  [badminton-mile-end-park-leisure-centre-female-social-badminton-tbc]
+   CHECK: day is "Not confirmed" (cannot be placed on the grid)
+   CHECK: source confidence is Medium - verify before relying on it
+
+Line 20: TH Trojans Women's Basketball Training (mixed abilities) @ Whitechapel Sports Centre  [basketball-whitechapel-sports-centre-wednesday-1730]
+   CHECK: source confidence is Medium - verify before relying on it
