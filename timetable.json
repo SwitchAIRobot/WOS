@@ -321,5 +321,22 @@
     "source_url": "https://www.towerhamlets.gov.uk/Documents/Leisure-and-culture/Sports/SPA-Weekly-Sessions-Timetable.pdf",
     "confidence": "Medium",
     "notes": "Age 14+; GBP 5.60; undated council PDF; older Better listing also shows Wed 17:30-19:20"
+  },
+    {
+    "id": "Self-defence-tiller-leisure-centre-saturdays-1215",
+    "week_commencing": "19/10/2026",
+    "sport": "Self-defence",
+    "session_name": "Women and Girls Self-Defence Class",
+    "provider": "Tower Hamlets at Be Well",
+    "venue": "Tiller Leisure Centre",
+    "area": "Isle of Dogs",
+    "borough": "Tower Hamlets",
+    "date_or_recurrence": "Weekly",
+    "day": "Saturdays",
+    "start_time": "12:15",
+    "end_time": "13:00",
+    "source_url": "https://be-well.org.uk/womens-only-self-defence-classes",
+    "confidence": "Low",
+    "notes": "Age 11+"
   }
 ]
