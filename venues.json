@@ -1,0 +1,10 @@
+{
+  "Clissold Leisure Centre": { "maps_query": "Clissold Leisure Centre, Stoke Newington, London", "directions": "" },
+  "Britannia Leisure Centre": { "maps_query": "Britannia Leisure Centre, Hoxton, London", "directions": "" },
+  "London Fields Lido": { "maps_query": "London Fields Lido, Hackney, London", "directions": "" },
+  "Mile End Park Leisure Centre": { "maps_query": "Mile End Park Leisure Centre, London", "directions": "" },
+  "Poplar Baths Leisure Centre": { "maps_query": "Poplar Baths Leisure Centre, Poplar, London", "directions": "" },
+  "Tiller Leisure Centre": { "maps_query": "Tiller Leisure Centre, Isle of Dogs, London", "directions": "" },
+  "York Hall Leisure Centre": { "maps_query": "York Hall Leisure Centre, Bethnal Green, London", "directions": "" },
+  "Whitechapel Sports Centre": { "maps_query": "Whitechapel Sports Centre, London", "directions": "" }
+}
